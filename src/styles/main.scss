@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    color: white;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+}
+h1 {
+    font-size: 24px;
+}
+div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #97beee;
+    background-image: url(../assets/desert.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    // display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    #logo {
+        align-items: center;
+        height: 33vh;
+    }
+    .main-site {
+        position: absolute;
+        top: 5;
+        right: 5;
+    }
+}
+.content {
+    display: inline-block;
+    width: 70%;
+    background-color: rgb(40,38,38,0.89);
+    padding: 40px;
+    .supply {
+        text-align: "center";
+        font-size: 50;
+        font-weight: "bold";
+    }
+    .increment {
+        flex-direction: row;
+
+    }
+}
