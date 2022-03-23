@@ -2,17 +2,17 @@
   "CONTRACT_ADDRESS": "0xc49e6cde4a903391824b99fd20a0094ccff7ab13",
   "SCAN_LINK": "https://polygonscan.com/token/0xc49e6cde4a903391824b99fd20a0094ccff7ab13",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 1
   },
-  "NFT_NAME": "Shroomies",
-  "SYMBOL": "MUSH",
-  "MAX_SUPPLY": 500,
+  "NFT_NAME": "Pablo Pieces",
+  "SYMBOL": "PABLO",
+  "MAX_SUPPLY": 10000,
   "WEI_COST": 500000000000000000,
-  "DISPLAY_COST": 0.5,
+  "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/shroomies-v2",
-  "SHOW_BACKGROUND": false
+  "MARKETPLACE_LINK": "https://opensea.io/collection/pablo-pieces",
+  "SHOW_BACKGROUND": true
 }
