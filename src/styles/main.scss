@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +10,29 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    font-family: "Changa", sans-serif;
     color: white;
     text-align: center;
 }
 p {
     font-size: 16px;
+    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
 }
 h1 {
     font-size: 24px;
+    font-weight: 800;
+}
+main {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    // background: linear-gradient(0deg, #727e94 0%, #000000 100%);
+    background: linear-gradient(0deg, #b6c2db 55%, #97BEEE 100%);
+    // background-color: #97BEEE;
 }
 div {
     -moz-user-select: none;
@@ -25,10 +41,24 @@ div {
     user-select: none;
     -o-user-select: none;
 }
-.main {
+button,
+::file-selector-button {
+    color: white;
+    background-color: #ec4899;
+    padding: 20px 30px 20px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.1s ease-in;
+    text-align: center;
+}
+.full {
     width: 100%;
     min-height: 100vh;
-    background-color: #97beee;
+    // background-color: #97beee;
     background-image: url(../assets/desert.png);
     background-position: center;
     background-attachment: fixed;
@@ -50,20 +80,56 @@ div {
         position: absolute;
         top: 5;
         right: 5;
+        // TODO: add Museo font
     }
 }
 .content {
     display: inline-block;
     width: 70%;
-    background-color: rgb(40,38,38,0.89);
+    background-color: rgb(40, 38, 38, 0.89);
     padding: 40px;
     .supply {
         text-align: "center";
         font-size: 50;
         font-weight: "bold";
     }
+    .address {
+        a:link {
+            color: #ec4899;
+        }
+        a:visited {
+            color: #ec4899;
+        }
+        a:hover {
+            //TODO: scale font not the div
+            transform: scale(102%);
+        }
+    }
+    .connect {
+        // color: purple;
+
+        // .connect-button {
+        //     color: purple;
+        //     padding: 10px;
+        //     border-radius: 50px;
+        //     border: none;
+        //     // background-color: var(--secondary);
+        //     padding: 10px;
+        //     // font-weight: bold;
+        //     // color: var(--secondary-text);
+        //     width: 100px;
+        //     cursor: pointer;
+        //     // box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+        //     -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+        //     -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
+        //     :active {
+        //         box-shadow: none;
+        //         -webkit-box-shadow: none;
+        //         -moz-box-shadow: none;
+        //     }
+        // }
+    }
     .increment {
         flex-direction: row;
-
     }
 }
