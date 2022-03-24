@@ -68,17 +68,13 @@ function App() {
 
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
-    if (newMintAmount < 1) {
-      newMintAmount = 1;
-    }
+    if (newMintAmount < 1) { newMintAmount = 1; }
     setMintAmount(newMintAmount);
   };
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 20) {
-      newMintAmount = 20;
-    }
+    if (newMintAmount > 10) { newMintAmount = 10; }
     setMintAmount(newMintAmount);
   };
 
@@ -112,13 +108,9 @@ function App() {
       <main>
         <div className="full">
           <div className="header">
-            <img
-              src={logo}
-              alt="logo"
-              id="logo"
-            ></img>
+            <img src={logo} alt="logo" id="logo"></img>
             <div className="main-site">
-              Back to main site
+              <a href="https://pablopieces.com" target="_blank" rel="noreferrer noopener">Back to main site</a>
             </div>
           </div>
           <div className="content">
@@ -149,7 +141,7 @@ function App() {
                 <p>Excluding gas fees. </p>
                 {blockchain.account === "" || blockchain.smartContract === null ? (
                   <div className="connect">
-                    <p>Connect to the {CONFIG.NETWORK.NAME} network </p>
+                    <p>Connect to the {CONFIG.NETWORK.NAME} network</p>
                     <button className="connect-button" onClick={(e) => {
                       e.preventDefault();
                       dispatch(connect());
@@ -169,7 +161,7 @@ function App() {
                   <>
                     <p>{feedback} </p>
                     <div className="increment">
-                      <button
+                      <button className="increment-button"
                         style={{ lineHeight: 0.4 }}
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
@@ -178,8 +170,8 @@ function App() {
                         }}>
                         -
                       </button>
-                      <p>{mintAmount} </p>
-                      <button
+                      <p id="center">{mintAmount} </p>
+                      <button className="increment-button"
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
@@ -203,19 +195,21 @@ function App() {
                 )}
               </>
             )}
-            <div className="info">
-              <p>
-                Please make sure you are connected to the right network (
-                {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-                Once you make the purchase, you cannot undo this action.
-              </p>
-              <p>
-                We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-                successfully mint your NFT. We recommend that you don't lower the
-                gas limit.
-              </p>
-            </div>
+
           </div>
+          <div className="info">
+            <p>
+              Please make sure you are connected to the right network (
+              {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
+              Once you make the purchase, you cannot undo this action.
+            </p>
+            <p>
+              We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
+              successfully mint your NFT. We recommend that you don't lower the
+              gas limit.
+            </p>
+          </div>
+
         </div>
       </main>
     </>

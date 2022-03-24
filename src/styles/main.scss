@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -30,9 +31,7 @@ main {
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
-    // background: linear-gradient(0deg, #727e94 0%, #000000 100%);
-    background: linear-gradient(0deg, #b6c2db 55%, #97BEEE 100%);
-    // background-color: #97BEEE;
+    background: linear-gradient(0deg, #b6c2db 55%, #97beee 100%);
 }
 div {
     -moz-user-select: none;
@@ -46,14 +45,24 @@ button,
     color: white;
     background-color: #ec4899;
     padding: 20px 30px 20px 30px;
+    margin: 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     cursor: pointer;
-    font-family: "Questrial", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     transition: transform 0.1s ease-in;
     text-align: center;
+    box-shadow: 0px 8px 0px -1px rgba(118, 36, 76, 1);
+    -webkit-box-shadow: 0px 8px 0px -1px rgba(118, 36, 76, 1);
+    -moz-box-shadow: 0px 8px 0px -1px rgba(118, 36, 76, 1);
+}
+button:active {
+    // color: green;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 .full {
     width: 100%;
@@ -66,31 +75,48 @@ button,
     // display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 10px 30px 30px 30px;
 }
 .header {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
+    flex-direction: row;
+    display: inline-block;
+    // text-align: center;
+    height: 20vh;
     #logo {
-        align-items: center;
-        height: 33vh;
+        height: 20vh;
     }
     .main-site {
+        float: right;
         position: absolute;
-        top: 5;
-        right: 5;
+        top: 5%;
+        right: 3%;
         // TODO: add Museo font
+        a:link {
+            text-decoration: inherit;
+            color: inherit;
+        }
+        
+        a:visited {
+            text-decoration: inherit;
+            color: inherit;
+        }
     }
 }
 .content {
     display: inline-block;
-    width: 70%;
-    background-color: rgb(40, 38, 38, 0.89);
+    width: 50%;
+    background-color: rgb(40, 38, 38, 0.7);
     padding: 40px;
+
+    border-style: inset;
+    border-color: #ec4899;
+    border-radius: 20px;
     .supply {
         text-align: "center";
-        font-size: 50;
+        font-size: 50px;
         font-weight: "bold";
     }
     .address {
@@ -106,30 +132,58 @@ button,
         }
     }
     .connect {
-        // color: purple;
-
-        // .connect-button {
-        //     color: purple;
-        //     padding: 10px;
-        //     border-radius: 50px;
-        //     border: none;
-        //     // background-color: var(--secondary);
-        //     padding: 10px;
-        //     // font-weight: bold;
-        //     // color: var(--secondary-text);
-        //     width: 100px;
-        //     cursor: pointer;
-        //     // box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
-        //     -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
-        //     -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
-        //     :active {
-        //         box-shadow: none;
-        //         -webkit-box-shadow: none;
-        //         -moz-box-shadow: none;
-        //     }
-        // }
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        gap: 10px;
     }
+
     .increment {
         flex-direction: row;
+        display: flex;
+        justify-content: center;
+        row-gap: 50px;
+        #center {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        .increment-button {
+            padding: 10px;
+            border-radius: 100%;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 15px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 6px 0px -2px rgba(118, 36, 76, 1);
+            -webkit-box-shadow: 0px 6px 0px -2px rgba(118, 36, 76, 1);
+            -moz-box-shadow: 0px 6px 0px -2px rgba(118, 36, 76, 1);
+        }
+        .increment-button:active {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
+    }
+}
+.info {
+    margin-top: 60px;
+    display: inline-block;
+    width: 70%;
+    background-color: rgb(40, 38, 38, 0.7);
+    padding: 20px;
+    
+    border-style: inset;
+    border-color: #97beee;
+    border-radius: 20px;
+    p {
+        font-size: 0.8em;
     }
 }
