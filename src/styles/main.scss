@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url("https://use.typekit.net/etw8xxt.css");
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,6 @@ body {
 }
 p {
     font-size: 16px;
-    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
 }
 h1 {
@@ -89,6 +88,8 @@ button:active {
         height: 20vh;
     }
     .main-site {
+        font-family: "Museo", serif;
+        font-weight: 700;
         float: right;
         position: absolute;
         top: 5%;
