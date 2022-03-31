@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x62A379d27d79324A26A18a2070A175f18F14B2Df",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x62A379d27d79324A26A18a2070A175f18F14B2Df",
+  "CONTRACT_ADDRESS": "0x86f0f8592f1f4fb4fbfa7f02c39188e8bf992a31",
+  "SCAN_LINK": "https://etherscan.io/address/0x86f0f8592f1f4fb4fbfa7f02c39188e8bf992a31",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
@@ -16,5 +16,5 @@
   "MARKETPLACE_LINK": "https://opensea.io/collection/pablo-pieces",
   "SHOW_BACKGROUND": true,
   "PAUSED": true,
-  "WHITELIST": ["0xc7aef4fd9dec1488f7aa81cc7ae781bb55e053c8","0xf0aafc63a12f7ad6b848cce999a8425794ff2a43","0x4170cc7217448c46f105a76e66d77eddd0edc0dd","0x7524f96892c720d80bfb8b38762b2796d8c4dd2b"]
+  "WHITELIST": ["0xE762CfE07Fd0371b31967ce998Dab888AA4D8CB1"]
 }
