@@ -11,15 +11,18 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-    font-family: "Changa", sans-serif;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
     color: white;
     text-align: center;
 }
 p {
     font-size: 16px;
     font-style: normal;
+    font-weight: 500;
 }
 h1 {
+    padding: 15px;
     font-size: 24px;
     font-weight: 800;
 }
@@ -94,12 +97,11 @@ button:active {
         position: absolute;
         top: 5%;
         right: 3%;
-        // TODO: add Museo font
         a:link {
             text-decoration: inherit;
             color: inherit;
         }
-        
+
         a:visited {
             text-decoration: inherit;
             color: inherit;
@@ -135,8 +137,11 @@ button:active {
     .connect {
         font-family: "Rubik", sans-serif;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 700;
         gap: 10px;
+        .connect-button {
+            font-weight: 700;
+        }
     }
 
     .increment {
@@ -180,7 +185,7 @@ button:active {
     width: 70%;
     background-color: rgb(40, 38, 38, 0.7);
     padding: 20px;
-    
+
     border-style: inset;
     border-color: #97beee;
     border-radius: 20px;

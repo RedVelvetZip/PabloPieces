@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0xc49e6cde4a903391824b99fd20a0094ccff7ab13",
-  "SCAN_LINK": "https://polygonscan.com/token/0xc49e6cde4a903391824b99fd20a0094ccff7ab13",
+  "CONTRACT_ADDRESS": "0x62A379d27d79324A26A18a2070A175f18F14B2Df",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x62A379d27d79324A26A18a2070A175f18F14B2Df",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
@@ -9,10 +9,12 @@
   "NFT_NAME": "Pablo Pieces",
   "SYMBOL": "PABLO",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 500000000000000000,
-  "DISPLAY_COST": 0.05,
+  "WEI_COST": 40000000000000000,
+  "DISPLAY_COST": 0.04,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://opensea.io/collection/pablo-pieces",
-  "SHOW_BACKGROUND": true
+  "SHOW_BACKGROUND": true,
+  "PAUSED": true,
+  "WHITELIST": ["0xc7aef4fd9dec1488f7aa81cc7ae781bb55e053c8","0xf0aafc63a12f7ad6b848cce999a8425794ff2a43","0x4170cc7217448c46f105a76e66d77eddd0edc0dd","0x7524f96892c720d80bfb8b38762b2796d8c4dd2b"]
 }

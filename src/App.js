@@ -32,6 +32,8 @@ function App() {
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
     SHOW_BACKGROUND: false,
+    PAUSED: true,
+    WHITELIST: []
   });
 
   const claimNFTs = () => {
@@ -59,7 +61,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+          `WOW, the ${CONFIG.NFT_NAME} is yours! Go visit Opensea.io to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -139,63 +141,79 @@ function App() {
                   {CONFIG.NETWORK.SYMBOL}.
                 </h1>
                 <p>Excluding gas fees. </p>
-                {blockchain.account === "" || blockchain.smartContract === null ? (
-                  <div className="connect">
-                    <p>Connect to the {CONFIG.NETWORK.NAME} network</p>
-                    <button className="connect-button" onClick={(e) => {
-                      e.preventDefault();
-                      dispatch(connect());
-                      getData();
-                    }}>
-                      CONNECT
-                    </button>
-                    {blockchain.errorMsg !== "" ? (
-                      <>
-                        <p>
-                          {blockchain.errorMsg}
-                        </p>
-                      </>
-                    ) : null}
-                  </div>
+                {(CONFIG.PAUSED === true) ? (
+                  <>
+                    <h1>Mint is not active</h1>
+                  </>
                 ) : (
                   <>
-                    <p>{feedback} </p>
-                    <div className="increment">
-                      <button className="increment-button"
-                        style={{ lineHeight: 0.4 }}
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
+                    {blockchain.account === "" || blockchain.smartContract === null ? (
+                      <div className="connect">
+                        <p>Connect to the {CONFIG.NETWORK.NAME} network</p>
+                        <button className="connect-button" onClick={(e) => {
                           e.preventDefault();
-                          decrementMintAmount();
-                        }}>
-                        -
-                      </button>
-                      <p id="center">{mintAmount} </p>
-                      <button className="increment-button"
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}>
-                        +
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs();
+                          dispatch(connect());
                           getData();
                         }}>
-                        {claimingNft ? "BUSY" : "BUY"}
-                      </button>
-                    </div>
+                          Connect
+                        </button>
+                        {blockchain.errorMsg !== "" ? (
+                          <>
+                            <p>
+                              {blockchain.errorMsg}
+                            </p>
+                          </>
+                        ) : null}
+                      </div>
+                    ) : (
+                      <>                  
+                        {/* IMPORTANT: make sure config whitelists are all lowercase as .includes() is case sensitive  */}
+                        {(CONFIG.WHITELIST.length === 0 || CONFIG.WHITELIST.includes(blockchain.account.toLowerCase())) ? (
+                          <>
+                            <p>{feedback} </p>
+                            <div className="increment">
+                              <button className="increment-button"
+                                style={{ lineHeight: 0.4 }}
+                                disabled={claimingNft ? 1 : 0}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  decrementMintAmount();
+                                }}>
+                                -
+                              </button>
+                              <p id="center">{mintAmount} </p>
+                              <button className="increment-button"
+                                disabled={claimingNft ? 1 : 0}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  incrementMintAmount();
+                                }}>
+                                +
+                              </button>
+                            </div>
+                            <div>
+                              <button
+                                disabled={claimingNft ? 1 : 0}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  claimNFTs();
+                                  getData();
+                                }}>
+                                {claimingNft ? "BUSY" : "BUY"}
+                              </button>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <h1>Sorry, you're not on the whitelist :( Come back for the Public Sale on April 1st!</h1>
+                          </>
+                        )}
+                      </>
+                    )}
                   </>
                 )}
               </>
             )}
-
           </div>
           <div className="info">
             <p>
@@ -209,7 +227,6 @@ function App() {
               gas limit.
             </p>
           </div>
-
         </div>
       </main>
     </>
