@@ -9,24 +9,12 @@
   "NFT_NAME": "Pablo Pieces",
   "SYMBOL": "PABLO",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 40000000000000000,
-  "DISPLAY_COST": 0.04,
+  "WEI_COST": 50000000000000000,
+  "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://opensea.io/collection/pablo-pieces",
   "SHOW_BACKGROUND": true,
   "PAUSED": false,
-  "WHITELIST": [
-    "0xdd68da8b2f3b5bfd696459fa2568efe308b1085d",
-    "0x39e2b387eccf43f32924c92277e9f21e40e0c6b8",
-    "0xa772035d953ccf2ed33ce75554e06888c79fe5b5",
-    "0x172a12e52085fd945df2b2ed78ac53363af1e85c",
-    "0x440496e915343c8c632f817b7c5783a34d36a3f9",
-    "0xa6bcd1f26448659376f5b5075935e740f854d547",
-    "0x1f2874ec67c8a2fd64994b64c0a3469b499140e3",
-    "0x0403abeccbd0eeb738ffd8a831c771810f802902",
-    "0x7524f96892c720d80bfb8b38762b2796d8c4dd2b",
-    "0xf9c703e488f1334847b75c5e9a33bd17ad29959d",
-    "0xf0aafc63a12f7ad6b848cce999a8425794ff2a43"
-  ]
+  "WHITELIST": [  ]
 }
