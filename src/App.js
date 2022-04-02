@@ -116,7 +116,7 @@ function App() {
           </div>
           <div className="content">
             <div>
-              <p>SUPPLY:</p>
+              <p>existing Pablos:</p>
             </div>
             <div className="supply">
               {data.totalSupply>0 ? data.totalSupply : "???"}
