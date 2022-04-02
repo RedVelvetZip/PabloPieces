@@ -25,7 +25,6 @@ function App() {
     },
     NFT_NAME: "",
     SYMBOL: "",
-    MAX_SUPPLY: 1,
     WEI_COST: 0,
     DISPLAY_COST: 0,
     GAS_LIMIT: 0,
@@ -116,8 +115,11 @@ function App() {
             </div>
           </div>
           <div className="content">
+            <div>
+              <p>SUPPLY:</p>
+            </div>
             <div className="supply">
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              {data.totalSupply>0 ? data.totalSupply : "???"}
             </div>
             <div className="address">
               <a target={"_blank"} href={CONFIG.SCAN_LINK}>
