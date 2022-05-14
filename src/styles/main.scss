@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
 @import url("https://use.typekit.net/etw8xxt.css");
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +71,7 @@ button:active {
     width: 100%;
     min-height: 100vh;
     // background-color: #97beee;
-    background-image: url(../assets/desert.png);
+    background-image: url(../assets/bg2.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -91,17 +92,18 @@ button:active {
         height: 20vh;
     }
     .main-site {
-        font-family: "Museo", serif;
-        font-weight: 700;
+        font-family: "Mitr", serif;
+        font-weight: 900;
         float: right;
         position: absolute;
         top: 5%;
         right: 3%;
+        color: black;
+        font-size: 1.7rem;
         a:link {
             text-decoration: inherit;
             color: inherit;
         }
-
         a:visited {
             text-decoration: inherit;
             color: inherit;
@@ -115,7 +117,11 @@ button:active {
     padding: 40px;
 
     border-style: inset;
-    border-color: #ec4899;
+    // border-color: #ec4899;
+    border-top-color: #FFC700;
+    border-left-color: #FFC700;
+    border-bottom-color: #FFE200;
+    border-right-color: #FFE200;
     border-radius: 20px;
     .supply {
         text-align: "center";
@@ -124,10 +130,10 @@ button:active {
     }
     .address {
         a:link {
-            color: #ec4899;
+            color: #FFE200;
         }
         a:visited {
-            color: #ec4899;
+            color: #FFE200;
         }
         a:hover {
             //TODO: scale font not the div
@@ -187,7 +193,10 @@ button:active {
     padding: 20px;
 
     border-style: inset;
-    border-color: #97beee;
+    border-top-color: #FFC700;
+    border-left-color: #FFC700;
+    border-bottom-color: #FFE200;
+    border-right-color: #FFE200;
     border-radius: 20px;
     p {
         font-size: 0.8em;

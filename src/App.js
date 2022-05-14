@@ -109,7 +109,7 @@ function App() {
       <main>
         <div className="full">
           <div className="header">
-            <img src={logo} alt="logo" id="logo"></img>
+            {/* <img src={logo} alt="logo" id="logo"></img> */}
             <div className="main-site">
               <a href="https://pablopieces.com" target="_blank" rel="noreferrer noopener">Back to main site</a>
             </div>
